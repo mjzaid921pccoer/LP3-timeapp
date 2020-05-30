@@ -33,7 +33,25 @@ class HomePage extends Component {
         })
     }
         
-    
+    get12hr(HH,MM,SS){ 
+        var md='';
+        HH=parseInt(HH);
+        MM=parseInt(MM);
+        SS=parseInt(SS);
+        if(HH<12){
+            md='AM';
+        }else{
+            md='PM'
+        }   
+
+        if (HH===0){
+            HH=12;
+        }else if(HH>12){
+            HH=HH-12;
+        }
+        return HH+':'+MM+':'+SS+md;    
+    }
+
     componentDidMount() {
         this.updateTime();    
     }
@@ -45,9 +63,12 @@ class HomePage extends Component {
     render() { 
     return ( <div className="myTime">
     <center>
-    <h2>Date: {this.state.today}</h2> 
-    <h2>Time: {this.state.hour+':'+this.state.minutes+':'+this.state.seconds}</h2>
-    <sub>note:-time would update after every 1min</sub>
+        <h2>Date: {this.state.today}</h2> 
+        <h2>(24Hr Format Time) {this.state.hour+':'+this.state.minutes+':'+this.state.seconds}</h2>
+        
+
+        <h2>(12Hr Format Time) {this.get12hr(this.state.hour,this.state.minutes,this.state.seconds)}</h2>
+        <sub>note:-time would update after every 1min</sub>
     </center>    
     </div> );
     }
