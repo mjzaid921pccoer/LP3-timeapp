@@ -1,7 +1,10 @@
 LP3 Assignment
-Use REST API To get time from server(backend) to frontend(24hr format)
+Use REST API To get time from server(backend) to frontend
 
 Clone/Download repository
+Note :- Direct running will give error
+for dependencies not found So Make Sure You install them by commands given below
+after that
 navigate to backend-timeapp
 and run yarn App
 to Run Assignment
