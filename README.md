@@ -8,7 +8,8 @@ and run "yarn App"
 to Run Assignment
 
 
-Commands for installing dependencies before running App
+Commands for installing dependencies
+incase any dependency error
 
 I)FOR FRONTEND
 
